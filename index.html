@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='root'>
+        <div :text='text'>
+            {{text}}-{{message}}-{{text}}
+        </div>
+        <div>
+            {{message}}
+        </div>
+    </div>
+    <!-- <script src='./watcher.js'></script>
+    <script src='./constoll.js'></script>
+    <script src='./observe.js'></script> -->
+    <script src='./mvvm.min.js'></script>
+    <script> 
+        new Mvvm({
+            el:"#root",
+            data:{
+                text:"1313",    
+                message:"32131"
+            },
+            mounted(){
+                this.text = 'text111'
+                this.message = 'message'
+            }
+        })
+    </script>
+</body>
+</html>
